@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimatedCircle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Scb-PQ-KXF">
+                                <rect key="frame" x="68" y="420" width="464" height="31"/>
+                                <connections>
+                                    <action selector="slideSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="eov-pp-mxT"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrentProgrss: 0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38a-iO-Ssy">
+                                <rect key="frame" x="225" y="484" width="150" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="38a-iO-Ssy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hca-lh-D78"/>
+                            <constraint firstItem="38a-iO-Ssy" firstAttribute="top" secondItem="Scb-PQ-KXF" secondAttribute="bottom" constant="34" id="Hcg-hv-dyl"/>
+                            <constraint firstItem="38a-iO-Ssy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NNf-68-i6S"/>
+                            <constraint firstItem="Scb-PQ-KXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NfS-D2-WN4"/>
+                            <constraint firstItem="Scb-PQ-KXF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="TzK-3h-Siu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="38a-iO-Ssy" secondAttribute="bottom" constant="71" id="i4i-09-bzA"/>
+                            <constraint firstItem="38a-iO-Ssy" firstAttribute="centerX" secondItem="Scb-PQ-KXF" secondAttribute="centerX" id="mws-vC-ycg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Scb-PQ-KXF" secondAttribute="bottom" constant="150" id="rEr-MV-fzO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Scb-PQ-KXF" secondAttribute="trailing" constant="50" id="yEW-Wd-nlm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NNf-68-i6S"/>
+                                <exclude reference="mws-vC-ycg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="38a-iO-Ssy" id="bro-yU-DnM"/>
+                        <outlet property="slider" destination="Scb-PQ-KXF" id="Hqo-uj-h2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="339"/>
+        </scene>
+    </scenes>
+</document>
